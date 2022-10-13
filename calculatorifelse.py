@@ -17,15 +17,13 @@ while repeat == "y":
 	if oper == "3":
 		print(+ num1 * num2)
 	if oper == "4":
-		while num2 == "0":
-			num2 = float(input("enter second number again"))
-			if num2 := "0":
-				continue
-			if num2 != "0":
-				print(+ num1 / num2)
+		if num2 != 0:
+			print(num1 / num2)
+		if num2 == 0:
+			print("Undefined")			
 	repeat = input("perform another operation?y/n")
 	if repeat == "y":
 		continue
 	if repeat == "n":	
-		break
+		print("enter any key to terminate program")
 input()
