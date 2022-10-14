@@ -3,6 +3,7 @@ import faulthandler
 
 repeat = "y"
 while repeat == "y":
+
 	print("select an operation")
 	print("1.+")
 	print("2.-")
@@ -19,7 +20,6 @@ while repeat == "y":
 			print("invalid operation")
 			print("select an operation")
 		continue
-
 	
 	if oper < 1 or oper > 6 or oper == "":
 		print("invalid operation")
@@ -59,10 +59,11 @@ while repeat == "y":
 		except OverflowError:
 			print("OverFlowError: result too large")
 	elif oper == 6:
-			if num2 >= 0:
+			if num1 >= 0:
 				print(num1 ** (1/num2))
-			if num2 < 0:
+			if num1 < 0:
 				print (num2,"√",num1)
+	
 	while repeat := input("perform another operation? y/n"):
 		if repeat == "n":
 			input("enter any key to terminate program")
