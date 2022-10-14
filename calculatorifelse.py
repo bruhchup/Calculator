@@ -11,9 +11,17 @@ while repeat == "y":
 	print("5.x**y")
 	print("6.y√x")
 
-	oper = int(input())
+	while True:
+		try:
+			oper = int(input())
+			break
+		except ValueError:
+			print("invalid operation")
+			print("select an operation")
+		continue
+
 	
-	if oper < 1 or oper > 6:
+	if oper < 1 or oper > 6 or oper == "":
 		print("invalid operation")
 		continue	
 
@@ -23,7 +31,7 @@ while repeat == "y":
 			print(num1)
 			break
 		except ValueError:
-			print("enter a number")	
+			print("invalid input")	
 			
 	while True:
 		try:
@@ -31,7 +39,7 @@ while repeat == "y":
 			print(num2)
 			break
 		except ValueError:
-			print("enter a number")
+			print("invalid input")
 	
 	if oper == 1:
 			print(+ num1 + num2)
