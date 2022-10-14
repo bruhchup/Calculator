@@ -10,7 +10,8 @@ while repeat == "y":
 	print("3.*")
 	print("4./")
 	print("5.x**y")
-	print("6.y√x")
+	print("6.√x")
+	print("7.y√x")
 
 	while True:
 		try:
@@ -21,7 +22,7 @@ while repeat == "y":
 			print("select an operation")
 		continue
 	
-	if oper < 1 or oper > 6 or oper == "":
+	if oper < 1 or oper > 7 or oper == "":
 		print("invalid operation")
 		continue	
 
@@ -32,8 +33,8 @@ while repeat == "y":
 			break
 		except ValueError:
 			print("invalid input")	
-			
-	while True:
+		
+	while oper != 6:
 		try:
 			num2 = float(input("enter second number"))
 			print(num2)
@@ -57,8 +58,11 @@ while repeat == "y":
 			print(num1 ** num2)	
 		except OverflowError:
 			print("OverFlowError: result too large")
-	elif oper == 6:			
-			print(num1 ** (1/num2))	
+	elif oper == 6:
+			comp = (num1 ** (1/2))	
+			print ((comp.imag),"j")
+	elif oper == 7:
+			print (num1 ** (1/num2))
 
 	while repeat := input("perform another operation? y/n"):
 		if repeat == "n":
