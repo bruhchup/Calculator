@@ -55,15 +55,11 @@ while repeat == "y":
 	elif oper == 5:
 		try:	
 			print(num1 ** num2)	
-			break
 		except OverflowError:
 			print("OverFlowError: result too large")
-	elif oper == 6:
-			if num1 >= 0:
-				print(num1 ** (1/num2))
-			if num1 < 0:
-				print (num2,"√",num1)
-	
+	elif oper == 6:			
+			print(num1 ** (1/num2))	
+
 	while repeat := input("perform another operation? y/n"):
 		if repeat == "n":
 			input("enter any key to terminate program")
