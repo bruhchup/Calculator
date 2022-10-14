@@ -51,7 +51,7 @@ while repeat == "y":
 				print(num1 ** (1/num2))
 			if num2 < 0:
 				print (num2,"√",num1)
-	while repeat := input("perform another operation?y/n"):
+	while repeat := input("perform another operation? y/n"):
 		if repeat == "n":
 			input("enter any key to terminate program")
 			exit()
@@ -61,5 +61,3 @@ while repeat == "y":
 			print(repeat,"is an invalid input")
 			continue
 	continue
-
-input()
