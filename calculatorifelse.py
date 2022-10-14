@@ -53,7 +53,11 @@ while repeat == "y":
 			if num2 == 0:
 				print("Undefined")
 	elif oper == 5:
+		try:	
 			print(num1 ** num2)	
+			break
+		except OverflowError:
+			print("OverFlowError: result too large")
 	elif oper == 6:
 			if num2 >= 0:
 				print(num1 ** (1/num2))
